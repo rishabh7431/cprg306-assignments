@@ -3,8 +3,13 @@ export default function Home() {
     <main>
       <header>
         <h1>CPRG 306: Web Development 2 - Assignments</h1>
-      </header>      
-      <a href="week-2">Week 2</a>
+      </header>
+      <div class=" border border-solid rounded box-content w-full max-w-1/2 5 py-5 text-center" >
+        <a href="week-2">Week 2</a>
+      </div>
+      <div class=" border border-solid rounded box-content w-full max-w-1/2 my-5 py-5 text-center" >
+        <a href="week-3">Week 3</a>
+      </div>
     </main>
   );
 }
