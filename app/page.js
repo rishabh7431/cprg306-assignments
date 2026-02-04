@@ -10,6 +10,9 @@ export default function Home() {
       <div className="rounded box-content w-full max-w-1/2 my-5 py-5 text-center bg-blue-500 hover:bg-sky-700" >
         <a href="week-3">Week 3</a>
       </div>
+      <div className="rounded box-content w-full max-w-1/2 my-5 py-5 text-center bg-blue-500 hover:bg-sky-700" >
+        <a href="week-4">Week 4</a>
+      </div>
     </main>
   );
 }
