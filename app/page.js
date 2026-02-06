@@ -1,17 +1,21 @@
+import { DivOnClick } from "./DivOnClick";
+
 export default function Home() {
   return (
     <main>
       <header>
-        <h1>CPRG 306: Web Development 2 - Assignments</h1>
+        <h1 className="text-[32px] text-center py-3">CPRG 306: Web Development 2 - Assignments</h1>
       </header>
-      <div className="rounded box-content w-full max-w-1/2 5 py-5 text-center bg-blue-500 hover:bg-sky-700" >
-        <a href="week-2">Week 2</a>
-      </div>
-      <div className="rounded box-content w-full max-w-1/2 my-5 py-5 text-center bg-blue-500 hover:bg-sky-700" >
-        <a href="week-3">Week 3</a>
-      </div>
-      <div className="rounded box-content w-full max-w-1/2 my-5 py-5 text-center bg-blue-500 hover:bg-sky-700" >
-        <a href="week-4">Week 4</a>
+      <div className="grid grid-cols-2">
+        <div>
+          <DivOnClick name="Week 2" link="week-2"/>
+        </div>
+        <div>
+          <DivOnClick name="Week 3" link="week-3"/>
+        </div>
+        <div>
+          <DivOnClick name="Week 4" link="week-4"/>
+        </div>
       </div>
     </main>
   );
