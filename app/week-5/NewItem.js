@@ -3,9 +3,12 @@ import { useState } from "react"
 
 export default function NewItem(){
 
+  //Initialize State
   const [name, setName] = useState("");
   const [quantity, setQuantity] = useState(1);
   const [category, setCategory] = useState("produce");
+  
+  //Create option tags for categories
   const categories = [
     {value: 'produce', label: 'Produce'},
     {value: 'dairy', label: 'Dairy'},
@@ -21,11 +24,13 @@ export default function NewItem(){
     {value: 'other', label: 'Other'},
   ];
 
+  // Create options for quantity
   const quantityOptions = Array.from({length: 99}, (_,i) => i+1);
 
   return(
-     <div className="flex justify-center items-center rounded-md py-[20px] px-[10px] bg-amber-50/5 max-w-xl mx-10/3">
-      <form onSubmit={(e) => {e.preventDefault(); handleSubmit(name, category, quantity); }}>
+     <div className="flex justify-center items-center rounded-md py-[20px] px-[10px] bg-amber-50/5 max-w-xl">
+      <form onSubmit={(e) => {e.preventDefault(); handleSubmit(name, category, quantity, setName, setQuantity, setCategory); 
+      }}>
         <div>
           <label className="mx-[15px] text-lg">Name:</label><br/>
           <input type="text" className="border-2 border-amber-50 rounded-sm py-[15px] w-120 mx-[15px] bg-black" onChange={e => (setName(e.target.value))}/>
@@ -57,12 +62,23 @@ export default function NewItem(){
   );
 }
 
-function handleSubmit(name, category, quantity){
+function handleSubmit(name, category, quantity, setName, setQuantity, setCategory){
+  
+  // Create Object: Create an item object with the current name, quantity, and category.
   const item = {
   title: name,
   cat: category,
   number: quantity
-};
+  };
+
+  // Log the Item: console.log the item object to the console.
   console.log(item);
+
+  // User Feedback: Call alert() to display the details of the created item (e.g., "Added: Bread, quantity: 2, category: bakery").
   alert(`Added: ${item.title}, quantity: ${item.number}, category: ${item.cat}`);
+  
+  // Reset State: Reset name to "", quantity to 1, and category to "produce".
+  setName("");
+  setCategory("produce");
+  setQuantity(1);
 }
