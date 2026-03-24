@@ -28,6 +28,9 @@ export default function Home() {
         <div>
           <DivOnClick name="Week 8" link="week-8"/>
         </div>
+        <div>
+          <DivOnClick name="Week 9" link="week-9"/>
+        </div>
       </div>
     </main>
   );
