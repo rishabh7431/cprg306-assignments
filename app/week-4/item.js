@@ -1,4 +1,4 @@
-export function Item(name, quantity, category){
+export function Item({ name, quantity, category }) {
   return(
     <div className=" border border-solid rounded box-content w-full max-w-96 my-5 bg-blue-500 hover:bg-sky-700">
       <ul>
