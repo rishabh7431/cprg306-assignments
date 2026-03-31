@@ -10,7 +10,7 @@ export default function LoginPage() {
   useEffect(() => {
     if (user) {
 
-      router.push("/week-9/shopping-list"); 
+      router.push("/week-10/shopping-list"); 
     }
   }, [user, router]);
 
