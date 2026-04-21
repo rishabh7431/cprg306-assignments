@@ -6,8 +6,8 @@ const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
 
 export const metadata = {
-  title: "Bambino & Co. | Daycare",
-  description: "Calgary's premier early learning center",
+  title: "CPRG 306 Assignments",
+  description: "Lab Assignments for CPRG 306",
 };
 
 export default function RootLayout({ children }) {

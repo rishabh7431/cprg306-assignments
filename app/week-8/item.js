@@ -1,9 +1,9 @@
-export function Item({name, quantity, category, onSelect}){
-  return(
+export function Item({ name, quantity, category, onSelect }) {
+  return (
     <div onClick={onSelect}>
-        <li className="text-base list-none">{name}</li>
-        <li className="text-base list-none">Quantity: {quantity}</li>
-        <li className="text-base list-none">Category: {category}</li>
+      <p className="text-base">{name}</p>
+      <p className="text-base">Quantity: {quantity}</p>
+      <p className="text-base">Category: {category}</p>
     </div>
   );
 }
